@@ -24,10 +24,10 @@ class Customer:
     def info_csv(self):
         return f"{self.full_name},{self.age},{self.age_judge()}"
     
-    def info_csv2(self):
+    def info_tab(self):
         return f"{self.full_name}   {self.age}  {self.age_judge()}"
     
-    def info_csv3(self):
+    def info_psv(self):
         return f"{self.full_name}|{self.age}|{self.age_judge()}"
 
 
@@ -51,11 +51,11 @@ print(ken.info_csv())
 print(tom.info_csv())
 print(ieyasu.info_csv())
 
-print(ken.info_csv2())
-print(tom.info_csv2())
-print(ieyasu.info_csv2())
+print(ken.info_tab())
+print(tom.info_tab())
+print(ieyasu.info_tab())
 
-print(ken.info_csv3())
-print(tom.info_csv3())
-print(ieyasu.info_csv3())
+print(ken.info_psv())
+print(tom.info_psv())
+print(ieyasu.info_psv())
 
