@@ -4,7 +4,11 @@ class Customer:
         self.family_name = family_name
         self.full_name = f"{first_name} {family_name}"
         self.age = age
-
+        
+    def __str__(self):
+        return f"{self.full_name}"
+        return f"{self.age}"
+    
     def age_judge(self):
         if (self.age < 20):
             return f"{1000}"
@@ -13,14 +17,10 @@ class Customer:
         elif (65 <= self.age):
             return f"{1200}"
 
-    def __str__(self):
-        return f"{self.full_name}"
-        return f"{self.age}"
 
-
-ken = Customer(first_name="Ken", family_name="Tanaka", age="15")
-tom = Customer(first_name="Tom", family_name="Ford", age="57")
-ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age="73")
+ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
+tom = Customer(first_name="Tom", family_name="Ford", age=57)
+ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
 
 
 print(ken)
@@ -30,7 +30,7 @@ print(ken.age)
 print(tom.age)
 print(ieyasu.age)
 
-print(ken.age_judge)
-print(tom.age_judge)
-print(ieyasu.age_judge)
+print(ken.age_judge())
+print(tom.age_judge())
+print(ieyasu.age_judge())
 
