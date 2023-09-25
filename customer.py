@@ -16,9 +16,19 @@ class Customer:
             return f"{1500}"
         elif (65 <= self.age):
             return f"{1200}"
+        elif (self.age <= 3):
+            return f"{0}"
+        elif (75 <= self.age):
+            return f"{500}"
         
     def info_csv(self):
         return f"{self.full_name},{self.age},{self.age_judge()}"
+    
+    def info_csv2(self):
+        return f"{self.full_name}   {self.age}  {self.age_judge()}"
+    
+    def info_csv3(self):
+        return f"{self.full_name}|{self.age}|{self.age_judge()}"
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
@@ -40,3 +50,12 @@ print(ieyasu.age_judge())
 print(ken.info_csv())
 print(tom.info_csv())
 print(ieyasu.info_csv())
+
+print(ken.info_csv2())
+print(tom.info_csv2())
+print(ieyasu.info_csv2())
+
+print(ken.info_csv3())
+print(tom.info_csv3())
+print(ieyasu.info_csv3())
+
